@@ -4,10 +4,12 @@
 @import url(join.css);
 @import url(header.css);
 @import url(expert-detail.css);
+@import url(experience.css);
+@import url(expert-voucher.css);
 
 body {
     margin: 0 auto;
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    background-color: #e7e7e7;
     padding: 0;
 }

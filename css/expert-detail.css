@@ -6,11 +6,10 @@
     overflow: hidden;
     width: 300px;
     text-align: center;
-    height: 550px; /* 카드 높이 수정 */
-    min-height: 550px; /* 최소 높이 수정 */
-    position: fixed; /* 요소를 고정 위치에 배치 */
-    top: 100px; /* 상단에서 20px 떨어진 위치에 고정 */
-    right: 20px; /* 오른쪽에서 20px 떨어진 위치에 고정 */
+    height: 550px;
+    position: sticky;
+    top: 100px; 
+    right: 20px; 
 }
 
 .card-expert img {
@@ -39,7 +38,7 @@
 }
 .button-container {
     padding: 20px;
-    background-color: #2ecc71;
+    background-color: #008584;
     color: white;
     text-align: center;
     cursor: pointer;
@@ -68,12 +67,12 @@
 .review-score {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #00c897;
+    color: #007D7C;
     margin-right: 0.5rem;
 }
 
 .review-best {
-    background-color: #00c897;
+    background-color: #008584;
     color: #fff;
     padding: 0.25rem 0.5rem;
     border-radius: 5px;
@@ -104,25 +103,27 @@
 
 .review-details {
     display: flex;
-    flex-direction: column;
     gap: 0.5rem;
-}
+    justify-content: space-between;
 
+}
 .review-detail-item {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.75rem;
+    padding: 0.25rem;
     border-radius: 10px;
-    background: linear-gradient(to right, #00c897 calc(var(--score) / 5 * 100%), #e6f4f1 calc(var(--score) / 5 * 100%));
+    background: linear-gradient(to right, #7EC6C8 calc(var(--score) / 5 * 100%), #e6f4f1 calc(var(--score) / 5 * 100%));
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     cursor: pointer;
+    margin-bottom: 10px;
+    height: 20px; /* Progress bar height */
 }
 
 .review-detail-item:hover {
-    background: linear-gradient(to right, #008584 calc(var(--score) / 5 * 100%), #d0e4e2 calc(var(--score) / 5 * 100%));
+    background: linear-gradient(to right, #007D7C calc(var(--score) / 5 * 100%), #d0e4e2 calc(var(--score) / 5 * 100%));
     color: #fff;
 }
 
@@ -132,14 +133,26 @@
 }
 
 .review-detail-item .item-info i {
-    font-size: 1.2rem;
+    font-size: 1rem; /* Adjust icon size */
     margin-right: 0.5rem;
 }
 
 .review-detail-item .rating {
-    font-size: 1.2rem;
+    font-size: 1rem; /* Adjust rating text size */
     font-weight: bold;
     z-index: 1;
+}
+
+.review-rating {
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+}
+
+.score-rating {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-right: 0.25rem;
 }
 
 /* 아이콘 색상 설정 */
@@ -166,3 +179,5 @@
 .icon-smile {
     color: #ff4081;
 }
+
+
