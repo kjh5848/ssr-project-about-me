@@ -6,6 +6,8 @@
 @import url(expert-detail.css);
 @import url(experience.css);
 @import url(expert-voucher.css);
+@import url(user-mypage.css);
+@import url(expert-mypage.css);
 
 body {
     margin: 0 auto;
