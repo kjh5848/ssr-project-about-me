@@ -1,159 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>마이페이지</title>
+    <title>커뮤니티 활동</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="/script/expert-mypage.js"></script>
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/community-activity.css">
 </head>
-
 <body>
-    <header class="header_ex">
-        <div class="container">
-            <div class="header">
-                <div class="header_left">
-                    <div class="logo">
-                        <a href="#!">
-                            <img src="./images/main_logo.svg" alt="Main Logo">
-                        </a>
-                    </div>
-                    <div class="menu">
-                        <ul>
-                            <li><a href="#!">커뮤니티</a></li>
-                            <li><a href="#!">전문가 찾기</a></li>
-                            <li><a href="#!">상담하기</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="header_right">
-                    <a href="#!" class="icon"><i class="fas fa-search"></i></a>
-                    <a href="#!" class="icon"><i class="far fa-user"></i></a>
-                </div>
-            </div>
-        </div>
-        <hr>
-    </header>
-
-    <div class="container mt-5 expert-mypage">
-        <h1 class="text-center mb-5">마이페이지</h1>
-
-        <!-- 프로필 보기 -->
-        <div class="card mb-4" id="profile-view-card">
+    <div class="container mt-5">
+        <div class="card">
             <div class="card-header">
-                프로필
+                내 커뮤니티 활동
             </div>
             <div class="card-body">
-                <div id="profile-view" class="profile-container">
-                    <div class="profile-image-wrapper">
-                        <img src="/images/iu.png" alt="Profile Picture" class="profile-image" id="profileImageView">
-                    </div>
-                    <div class="profile-details ">
-                        <div class="row">
-                            <div class="col-md-6 mb-2">
-                                <div class="font-weight-bold">상담사 :</div>
-                                <div id="username">kjh5848</div>
+                <div class="row text-center mb-4">
+                    <div class="col-md-4">
+                        <div class="activity-card">
+                            <div class="activity-icon">
+                                👀
                             </div>
-                            <div class="col-md-6 mb-2">
-                                <div class="font-weight-bold">이메일 :</div>
-                                <div><i class="fas fa-envelope"></i> <span id="email">kjh5848@kakao.com</span></div>
+                            <div class="activity-stat">
+                                0
                             </div>
-                            <div class="col-md-6 mb-2">
-                                <div class="font-weight-bold">명칭 :</div>
-                                <div id="title">1급 심리상담사</div>
+                            <div class="activity-label">
+                                공감
                             </div>
                         </div>
-                        <div class="text-center mt-3">
-                            <button class="btn btn-outline-secondary" id="editProfile"><i class="fas fa-edit"></i> 수정</button>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="activity-card">
+                            <div class="activity-icon">
+                                💪
+                            </div>
+                            <div class="activity-stat">
+                                0
+                            </div>
+                            <div class="activity-label">
+                                응원받는
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- 프로필 수정 -->
-        <div class="card mb-4 d-none" id="profile-edit-card">
-            <div class="card-header">
-                프로필 수정
-            </div>
-            <div class="card-body">
-                <div id="profile-edit" class="profile-edit-container">
-                    <div class="profile-image-wrapper">
-                        <input type="file" id="profileImageInput" class="d-none">
-                        <img src="/images/iu.png" alt="Profile Picture" class="profile-image" id="profileImageEdit">
-                        <span class="edit-icon"><i class="fas fa-pen"></i></span>
-                    </div>
-                    <div class="profile-details border">
-                        <div class="row">
-                            <div class="col-md-6 mb-2">
-                                <div class="font-weight-bold">상담사 :</div>
-                                <input type="text" id="edit-username" class="form-control" value="kjh5848">
+                    <div class="col-md-4">
+                        <div class="activity-card">
+                            <div class="activity-icon">
+                                🔥
                             </div>
-                            <div class="col-md-6 mb-2">
-                                <div class="font-weight-bold">이메일 :</div>
-                                <p class="card-text"><i class="fas fa-envelope"></i> kjh5848@kakao.com</p>
+                            <div class="activity-stat">
+                                1
                             </div>
-                            <div class="col-md-6 mb-2">
-                                <div class="font-weight-bold">명칭 :</div>
-                                <select id="edit-title" class="form-control">
-                                    <option value="1급 심리상담사">1급 심리상담사</option>
-                                    <option value="2급 심리상담사">2급 심리상담사</option>
-                                </select>
+                            <div class="activity-label">
+                                응원하는
                             </div>
-                        </div>
-                        <div class="text-center mt-3">
-                            <button class="btn btn-outline-secondary" id="cancelEdit">취소</button>
-                            <button class="btn btn-outline-primary" id="saveProfile">저장</button>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
 
-        <div class="form-group row">
-            <div class="col-sm-12">
-                <div class="card">
-                    <div class="card-header d-flex justify-content-between align-items-center">
-                        경력
-                        <button type="button" class="btn btn-outline-secondary" id="addCareer"><i class="fas fa-plus"></i></button>
+                <ul class="nav nav-tabs" id="activity-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#my-stories" data-toggle="tab">나의 사연</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#mind-post" data-toggle="tab">마인드포스팅</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#my-comments" data-toggle="tab">나의 댓글</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#bookmark" data-toggle="tab">북마크</a>
+                    </li>
+                </ul>
+                <div class="tab-content mt-3">
+                    <div class="tab-pane fade show active" id="my-stories">
+                        작성한 사연이 없습니다
                     </div>
-                    <div class="card-body">
-                        <form id="career-form">
-                            <!-- 동적으로 추가되는 경력 항목 -->
-                        </form>
+                    <div class="tab-pane fade" id="mind-post">
+                        작성한 마인드포스팅이 없습니다
+                    </div>
+                    <div class="tab-pane fade" id="my-comments">
+                        작성한 댓글이 없습니다
+                    </div>
+                    <div class="tab-pane fade" id="bookmark">
+                        북마크한 내용이 없습니다
                     </div>
                 </div>
-            </div>
-        </div>
-
-        <div class="form-group row">
-            <div class="col-sm-12">
-                <div class="card">
-                    <div class="card-header d-flex justify-content-between align-items-center">
-                        학력
-                        <button type="button" class="btn btn-outline-secondary" id="addEducation"><i class="fas fa-plus"></i></button>
-                    </div>
-                    <div class="card-body">
-                        <form id="education-form">
-                            <!-- 동적으로 추가되는 학력 항목 -->
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- 확인 버튼 추가 -->
-        <div class="form-group row">
-            <div class="col-sm-12 text-center mt-3">
-                <button type="button" class="btn btn-primary" id="submitForm">확인</button>
             </div>
         </div>
     </div>
 
-   
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    
 </body>
 </html>
